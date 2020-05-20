@@ -109,15 +109,15 @@ pause;
 %  code in the sigmoidGradient.m file.
 %
 
-%%%fprintf('\nEvaluating sigmoid gradient...\n')
+fprintf('\nEvaluating sigmoid gradient...\n')
 
-%%%g = sigmoidGradient([-1 -0.5 0 0.5 1]);
-%%%fprintf('Sigmoid gradient evaluated at [-1 -0.5 0 0.5 1]:\n  ');
-%%%fprintf('%f ', g);
-%%%fprintf('\n\n');
+g = sigmoidGradient([-1 -0.5 0 0.5 1]);
+fprintf('Sigmoid gradient evaluated at [-1 -0.5 0 0.5 1]:\n  ');
+fprintf('%f ', g);
+fprintf('\n\n');
 
-%%%fprintf('Program paused. Press enter to continue.\n');
-%%%pause;
+fprintf('Program paused. Press enter to continue.\n');
+pause;
 
 
 %% ================ Part 6: Initializing Pameters ================
