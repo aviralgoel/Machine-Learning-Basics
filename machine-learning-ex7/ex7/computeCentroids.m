@@ -29,7 +29,7 @@ centroids = zeros(K, n);
 
 
 for i = 1:K
-    centroids(i,:) = X' * (idx == i) / sum( idx==i ); 
+    centroids(i,:) = (X'*(idx == i))/ sum(idx==i ); 
 end
 
 
