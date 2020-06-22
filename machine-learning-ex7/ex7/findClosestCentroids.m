@@ -21,6 +21,21 @@ idx = zeros(size(X,1), 1);
 % Note: You can use a for-loop over the examples to compute this.
 %
 
+%--For every training example--%
+for i = 1:length(X)
+  distances = [];
+  %--Calculate distance from every centerioid
+  for j = 1:K
+    %--Square of distance of a x(i) datapoint from Kth centroid--%
+    localDistanceSquare = sum((X(i,:) - centroids(j,:)).^2,2);
+    %--Store the sqaure distances from every centeroid--%
+    distances = [distances;localDistanceSquare];    
+  endfor
+  %--the minimum distance's position in the distances matrix is the Kth centeroid--%
+  [M,I] = min(distances);
+  %--Update idx for x(i)--%
+  idx(i) = I;
+endfor
 
 
 
