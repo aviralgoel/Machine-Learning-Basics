@@ -17,9 +17,11 @@ Z = zeros(size(X, 1), K);
 %                    x = X(i, :)';
 %                    projection_k = x' * U(:, k);
 %
+%%--(m x K) = (m x n ) * (n x K) * --%%
+%%-- Each column in Z shows approx value of X, if we reduce to K dimensions --%%
+%%-- Each row in Z is approx value of original X. (Hence m columns) --%%
 
-
-
+Z =  X * U(:,1:K) ;
 
 % =============================================================
 
